@@ -1,0 +1,17 @@
+type Query{
+    vehicle(id: String): [VehicleStatus!]!
+    vehicles: [VehicleStatus!]!
+}
+
+type VehicleStatus { bike_id: String
+  lat: Float
+  lon: Float
+  is_reserved: Int
+  is_disabled: Int
+  vehicle_type: String
+  android: String
+  ios: String }
+
+type Data { bikes: [VehicleStatus ] }
+
+type VehicleDto { last_updated: String ttl: Int data: Data }
